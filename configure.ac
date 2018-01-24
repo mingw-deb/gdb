@@ -31,7 +31,7 @@ m4_include([lt~obsolete.m4])
 m4_include([config/isl.m4])
 
 AC_INIT(move-if-change)
-AC_PREREQ(2.64)
+dnl AC_PREREQ(2.64)
 AC_DISABLE_OPTION_CHECKING
 
 progname=$0
