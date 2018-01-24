@@ -1,12 +1,26 @@
-From fc63ea4d0872fd7fff17fac5cdd7569a4f093a5b Mon Sep 17 00:00:00 2001
+From d2a13550239a3e8a7edaeed22ed37e07186635cf Mon Sep 17 00:00:00 2001
 From: Tobias Schlemmer <keinstein@users.sourceforge.net>
 Date: Wed, 24 Jan 2018 11:04:29 +0100
 Subject: disable autoconf version check
 
 ---
- configure.ac | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ config/override.m4 | 2 +-
+ configure.ac       | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
+diff --git a/config/override.m4 b/config/override.m4
+index b5ce654..d3e815b 100644
+--- a/config/override.m4
++++ b/config/override.m4
+@@ -29,7 +29,7 @@ m4_copy_force([_AC_PREREQ], [AC_PREREQ])
+ 
+ dnl Ensure exactly this Autoconf version is used
+ m4_ifndef([_GCC_AUTOCONF_VERSION],
+-  [m4_define([_GCC_AUTOCONF_VERSION], [2.64])])
++  [m4_define([_GCC_AUTOCONF_VERSION], [2.69])])
+ 
+ dnl Test for the exact version when AC_INIT is expanded.
+ dnl This allows to update the tree in steps (for testing)
 diff --git a/configure.ac b/configure.ac
 index c59e75c..c738d68 100644
 --- a/configure.ac
