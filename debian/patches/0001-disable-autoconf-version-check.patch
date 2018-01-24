@@ -1,0 +1,22 @@
+From fc63ea4d0872fd7fff17fac5cdd7569a4f093a5b Mon Sep 17 00:00:00 2001
+From: Tobias Schlemmer <keinstein@users.sourceforge.net>
+Date: Wed, 24 Jan 2018 11:04:29 +0100
+Subject: disable autoconf version check
+
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index c59e75c..c738d68 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -31,7 +31,7 @@ m4_include([lt~obsolete.m4])
+ m4_include([config/isl.m4])
+ 
+ AC_INIT(move-if-change)
+-AC_PREREQ(2.64)
++dnl AC_PREREQ(2.64)
+ AC_DISABLE_OPTION_CHECKING
+ 
+ progname=$0
